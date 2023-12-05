@@ -20,7 +20,7 @@ public class ArrayListAlunoRepository implements iAlunoRepository {
 
    @Override
    public Aluno buscar(String nome) {
-       for (Aluno aluno : alunos) {
+       for (Aluno aluno : this.alunos) {
            if (aluno.getNome().equals(nome)) {
                return aluno;
            }
@@ -33,4 +33,3 @@ public class ArrayListAlunoRepository implements iAlunoRepository {
        return this.alunos;
    }
 }
-
