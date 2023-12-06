@@ -1,5 +1,10 @@
+package repositories;
 import java.util.ArrayList;
 import java.util.List;
+
+import contracts.iAlunoRepository;
+import exceptions.AlunoNaoEncontradoException;
+import models.Aluno;
 
 public class ArrayListAlunoRepository implements iAlunoRepository {
    private List<Aluno> alunos;
@@ -25,7 +30,7 @@ public class ArrayListAlunoRepository implements iAlunoRepository {
                return aluno;
            }
        }
-       return null;
+       throw new AlunoNaoEncontradoException("Aluno não encontrado");
    }
 
    @Override

@@ -1,4 +1,7 @@
+package contracts;
+
 import java.util.List;
+import models.Aluno;
 
 public interface iAlunoRepository {
    void adicionar(Aluno aluno);
@@ -6,3 +9,6 @@ public interface iAlunoRepository {
    Aluno buscar(String nome);
    List<Aluno> listar();
 }
+
+
+
